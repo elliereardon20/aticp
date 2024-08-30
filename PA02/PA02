@@ -1,0 +1,24 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    ifstream infile ("PA02SampleFile.txt");
+    int x;
+    int y = 0;
+   for(int i = 0; i < 11; i++){
+        while(true){
+        infile >> x;
+        if(x==i){
+            y++;
+        }
+        if(infile.eof()){
+            break;
+        }
+        }
+        cerr<<i<<" "<<y;
+    } 
+    return 0;
+}
